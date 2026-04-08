@@ -1,0 +1,51 @@
+version: "1"
+
+server:
+  address: "http://localhost:9090"
+  metrics_address: "http://localhost:8080"
+
+mode: "functional"   # smoke | functional | soak
+duration: "15m"      # Only used in soak mode
+run_id: ""           # Auto-generated if empty
+
+agents:
+  base_port: 18080
+  echo:
+    count: 2
+  slow:
+    count: 1
+    delay_ms: 2000
+  error:
+    count: 1
+    error_rate: 1.0
+  streaming:
+    count: 2
+    events_per_stream: 10
+    event_delay_ms: 100
+  oversize:
+    count: 1
+    response_size_bytes: 20971520
+
+suites:
+  a2a_registry: true
+  a2a_sync: true
+  a2a_streaming: true
+  a2a_errors: true
+  a2a_limits: true
+  a2a_soak: true       # Only runs in soak mode
+
+soak:
+  rate: 50             # Requests per second
+  snapshot_interval: "30s"
+
+thresholds:
+  max_error_rate_pct: 1.0
+  max_p99_latency_ms: 5000
+  max_p999_latency_ms: 10000
+  min_throughput_pct: 90
+  max_memory_growth_pct: 50
+
+output:
+  report_file: ""      # Auto-generated if empty
+  log_level: "info"
+  log_format: "text"

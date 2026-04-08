@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hXXK/zXvb98GqM7GlAASlSfiWSDYQlaWsfEQ/ZNEIpg=",
+  "Source": "DeregisterAgent",
+  "BasePath": "_content/DeregisterAgent",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

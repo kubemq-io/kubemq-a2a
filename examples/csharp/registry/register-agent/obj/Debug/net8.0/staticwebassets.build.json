@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dDKJL3DmPxMNLg7DACD5+MCH/Fp7YTZeiZ/LR6SxD5w=",
+  "Source": "RegisterAgent",
+  "BasePath": "_content/RegisterAgent",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

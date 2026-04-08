@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IMB5OPV+8POG2K+FtEi/lnLJWyGQ6liij7xF5tZ8IRQ=",
+  "Source": "ClientDisconnect",
+  "BasePath": "_content/ClientDisconnect",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

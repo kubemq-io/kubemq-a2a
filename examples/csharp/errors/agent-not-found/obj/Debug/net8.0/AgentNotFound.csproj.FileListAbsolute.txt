@@ -1,0 +1,15 @@
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/bin/Debug/net8.0/AgentNotFound
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/bin/Debug/net8.0/AgentNotFound.deps.json
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/bin/Debug/net8.0/AgentNotFound.runtimeconfig.json
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/bin/Debug/net8.0/AgentNotFound.dll
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/bin/Debug/net8.0/AgentNotFound.pdb
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.AssemblyInfoInputs.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.AssemblyInfo.cs
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.csproj.CoreCompileInputs.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.sourcelink.json
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.dll
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/refint/AgentNotFound.dll
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.pdb
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/AgentNotFound.genruntimeconfig.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/agent-not-found/obj/Debug/net8.0/ref/AgentNotFound.dll

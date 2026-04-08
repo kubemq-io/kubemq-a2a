@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cNQh2qUMXwyCfruVrH1aatAIfceIJXfL9+Vf01wdW50=",
+  "Source": "ConcurrencyLimit",
+  "BasePath": "_content/ConcurrencyLimit",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

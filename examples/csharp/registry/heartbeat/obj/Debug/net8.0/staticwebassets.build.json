@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DeYpC8dm+rorKcTYhGJv9BWqhQecsdnvzsXKh1rB/vg=",
+  "Source": "Heartbeat",
+  "BasePath": "_content/Heartbeat",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

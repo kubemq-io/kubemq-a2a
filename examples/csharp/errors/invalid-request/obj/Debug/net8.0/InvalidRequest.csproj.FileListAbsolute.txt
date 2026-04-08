@@ -1,0 +1,15 @@
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/bin/Debug/net8.0/InvalidRequest
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/bin/Debug/net8.0/InvalidRequest.deps.json
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/bin/Debug/net8.0/InvalidRequest.runtimeconfig.json
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/bin/Debug/net8.0/InvalidRequest.dll
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/bin/Debug/net8.0/InvalidRequest.pdb
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.AssemblyInfoInputs.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.AssemblyInfo.cs
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.csproj.CoreCompileInputs.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.sourcelink.json
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.dll
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/refint/InvalidRequest.dll
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.pdb
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/InvalidRequest.genruntimeconfig.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/errors/invalid-request/obj/Debug/net8.0/ref/InvalidRequest.dll

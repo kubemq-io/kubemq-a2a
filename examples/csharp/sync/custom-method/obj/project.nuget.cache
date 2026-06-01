@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RFMmSH5jiwmPAzrwzj2Bemd2nQ0L6iq4W4/lE4LbgSNJl8XJEXSB9qUUiZCb0zZUav8Rhiu2mZ0KJmwEKRrfaw==",
+  "dgSpecHash": "k4/Qxe/yls4l+wm91jKjIh92NzQDRuqwOPOZCxWrxLsmgMwjKmj0AgVbr1RohBlBKGHL89dLrXZzGmAFRibCjQ==",
   "success": true,
   "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/sync/custom-method/CustomMethod.csproj",
   "expectedPackageFiles": [],

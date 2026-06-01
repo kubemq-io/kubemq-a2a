@@ -20,7 +20,17 @@ func listAgents(url string, label string) {
 	body, _ := io.ReadAll(resp.Body)
 
 	var agents []map[string]interface{}
-	json.Unmarshal(body, &agents)
+	if err := json.Unmarshal(body, &agents); err != nil {
+		var wrapper map[string]interface{}
+		json.Unmarshal(body, &wrapper)
+		if raw, ok := wrapper["agents"].([]interface{}); ok {
+			for _, a := range raw {
+				if m, ok := a.(map[string]interface{}); ok {
+					agents = append(agents, m)
+				}
+			}
+		}
+	}
 
 	fmt.Printf("=== %s ===\n", label)
 	for _, agent := range agents {

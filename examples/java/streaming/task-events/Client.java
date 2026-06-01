@@ -48,17 +48,17 @@ public class Client {
                 var data = MAPPER.readTree(line.substring(6));
                 eventTypes.merge(currentEvent, 1, Integer::sum);
 
+                var inner = data.path("payload").path("payload");
                 switch (currentEvent) {
                     case "task.status" -> {
-                        var p = data.path("payload");
-                        System.out.println("  [STATUS]   progress=" + p.path("progress") + "/" + p.path("total"));
+                        System.out.println("  [STATUS]   progress=" + inner.path("progress") + "/" + inner.path("total"));
                     }
                     case "task.artifact" ->
-                        System.out.println("  [ARTIFACT] name=" + data.path("payload").path("name").asText());
+                        System.out.println("  [ARTIFACT] name=" + inner.path("name").asText());
                     case "task.done" ->
-                        System.out.println("  [DONE]     result=" + data.path("payload").path("final_result").asText());
+                        System.out.println("  [DONE]     result=" + inner.path("final_result").asText());
                     case "task.error" ->
-                        System.out.println("  [ERROR]    " + data.path("payload"));
+                        System.out.println("  [ERROR]    " + inner);
                 }
 
                 if ("task.done".equals(currentEvent) || "task.error".equals(currentEvent)) break;

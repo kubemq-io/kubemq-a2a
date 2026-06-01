@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ybPzxABXe5KmVomLC7lyo3KVU7+n2FIxw/tsxXfK4D4SWOi9QpTMNltHtlenglSi0ZqyhrF3InumffGGEz753Q==",
+  "dgSpecHash": "ZfTVz+Duw80pBS3QXw1iW2Q3RlhGxk+V+SuNnvyjEqpwYn3LkCFt0SHen3eqdgEEftdfdyv99fa0bTjkY1LgOA==",
   "success": true,
   "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/streaming/client-disconnect/ClientDisconnect.csproj",
   "expectedPackageFiles": [],

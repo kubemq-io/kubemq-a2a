@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeregisterAgent")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3db97548f31601f916f97d6c9bdf677a8830507c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c885a57f5a738d8e5c3d26693184497e9b4578c")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeregisterAgent")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeregisterAgent")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

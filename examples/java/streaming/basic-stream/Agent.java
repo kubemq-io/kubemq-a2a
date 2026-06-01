@@ -39,7 +39,7 @@ public class Agent {
                         ));
                         os.write(("event: task.status\ndata: " + event + "\n\n").getBytes());
                         os.flush();
-                        Thread.sleep(500);
+                        try { Thread.sleep(500); } catch (InterruptedException ie) { break; }
                     }
                     var done = MAPPER.writeValueAsString(Map.of(
                         "type", "done",

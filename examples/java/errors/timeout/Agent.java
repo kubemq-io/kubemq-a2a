@@ -27,7 +27,7 @@ public class Agent {
             }
             var body = MAPPER.readTree(exchange.getRequestBody());
             System.out.println("Received request, sleeping " + DELAY_SECONDS + "s...");
-            Thread.sleep(DELAY_SECONDS * 1000L);
+            try { Thread.sleep(DELAY_SECONDS * 1000L); } catch (InterruptedException ie) { return; }
             System.out.println("Responding after delay");
 
             var response = MAPPER.createObjectNode();

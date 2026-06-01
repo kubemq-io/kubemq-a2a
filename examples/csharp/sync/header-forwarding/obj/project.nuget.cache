@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RF3ZmLadppiVmKaMtosFeFFQ7627KUWcja/wqcKI6B38ZhQRpzD47jo2jir815vllHq5w2o/ob0vlYIb7jgyYw==",
+  "dgSpecHash": "m/dzSpKtomr55bO06XnRsl5RuRyiRDn3hTDcyF0rQ3vFhzX4tXcm3LR/cSdKWTr4LC4Yp6OWGhGAAAVOYTYFlg==",
   "success": true,
   "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/sync/header-forwarding/HeaderForwarding.csproj",
   "expectedPackageFiles": [],

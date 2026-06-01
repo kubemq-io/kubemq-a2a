@@ -28,7 +28,7 @@ public class Agent {
                 return;
             }
             var body = MAPPER.readTree(exchange.getRequestBody());
-            Thread.sleep(DELAY_SECONDS * 1000L);
+            try { Thread.sleep(DELAY_SECONDS * 1000L); } catch (InterruptedException ie) { return; }
 
             var response = MAPPER.createObjectNode();
             response.put("jsonrpc", "2.0");

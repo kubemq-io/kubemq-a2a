@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GDYl9VpGz86Zz5sX+vqzm1ixNtpTBE6Sn0CL/HMUhzHNjujTtHMfLv5xamA8LviXG8VBiHBi1hw4lIOqs0D+pw==",
+  "dgSpecHash": "CZNT/GiP/Y9dX8f/QmNSGE2XAo72GTFmS7hfEtgh8DN1nSvmCL+jlGKpQEJlqAEw3L1E1xY3vomnisHVMVLVgQ==",
   "success": true,
   "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/registry/agent-info/AgentInfo.csproj",
   "expectedPackageFiles": [],

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rUky9tKKxG2ZoORHz4DghcdBA6TIcu4O96IYrAkskOpAyZHtGLqeaRl5J83mflfczQNac+KSnAOxswwS0MgWRA==",
+  "dgSpecHash": "WrtQzsF20Awm4gotJxGTQWqLYsk99kKfA/T4ry8O2b+0Vxg4eLUXkE4AIa51mOFgatdDAu82xzyVUo/aBdOJ2Q==",
   "success": true,
   "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/registry/heartbeat/Heartbeat.csproj",
   "expectedPackageFiles": [],

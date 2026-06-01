@@ -10,7 +10,7 @@
         "projectUniqueName": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/registry/register-agent/RegisterAgent.csproj",
         "projectName": "RegisterAgent",
         "projectPath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/registry/register-agent/RegisterAgent.csproj",
-        "packagesPath": "/var/folders/nk/bjvfydx15xsd4hsfkm471zx40000gn/T/cursor-sandbox-cache/55aadf90bff188c46e3fe40bb024ae88/nuget",
+        "packagesPath": "/Users/liornabat/.nuget/packages/",
         "outputPath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/registry/register-agent/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [

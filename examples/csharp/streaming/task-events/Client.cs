@@ -54,15 +54,15 @@ while (!reader.EndOfStream)
 
         if (eventType == "task.status")
         {
-            var p = data["payload"]!;
+            var p = data["payload"]!["payload"]!;
             Console.WriteLine($"  [STATUS]   progress={p["progress"]}/{p["total"]}");
         }
         else if (eventType == "task.artifact")
-            Console.WriteLine($"  [ARTIFACT] name={data["payload"]!["name"]}");
+            Console.WriteLine($"  [ARTIFACT] name={data["payload"]!["payload"]!["name"]}");
         else if (eventType == "task.done")
-            Console.WriteLine($"  [DONE]     result={data["payload"]!["final_result"]}");
+            Console.WriteLine($"  [DONE]     result={data["payload"]!["payload"]!["final_result"]}");
         else if (eventType == "task.error")
-            Console.WriteLine($"  [ERROR]    {data["payload"]}");
+            Console.WriteLine($"  [ERROR]    {data["payload"]!["payload"]}");
 
         if (eventType is "task.done" or "task.error")
             break;

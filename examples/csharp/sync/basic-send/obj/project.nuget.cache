@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "l8bJbvLXNTfZ62pUk5t+M+sYd0YSpng0AnXQGhK1NqAuOQRRteDBdgnwGRR0dS8b88+m5FKM1boErf2LyH2mtQ==",
+  "dgSpecHash": "xILIY9WNTu3Udoc5huShT3i5tMWkOb1TvNtUtXG+YDqNRtZs8Q6lUIzi2FAAfAaqJgA+kLbviBFRRVB6QvZCoQ==",
   "success": true,
   "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/sync/basic-send/BasicSend.csproj",
   "expectedPackageFiles": [],

@@ -52,18 +52,19 @@ async function main() {
       counts[evt.event] = (counts[evt.event] || 0) + 1;
       const payload = JSON.parse(evt.data);
 
+      const inner = payload.payload?.payload ?? payload.payload;
       switch (evt.event) {
         case "task.status":
-          console.log(`[STATUS]   progress=${payload.payload.progress}/${payload.payload.total} status=${payload.payload.status}`);
+          console.log(`[STATUS]   progress=${inner.progress}/${inner.total} status=${inner.status}`);
           break;
         case "task.artifact":
-          console.log(`[ARTIFACT] name=${payload.payload.name} data=${JSON.stringify(payload.payload.data)}`);
+          console.log(`[ARTIFACT] name=${inner.name} data=${JSON.stringify(inner.data)}`);
           break;
         case "task.done":
-          console.log(`[DONE]     result=${payload.payload.final_result}`);
+          console.log(`[DONE]     result=${inner.final_result}`);
           break;
         case "task.error":
-          console.log(`[ERROR]    ${payload.payload.message}`);
+          console.log(`[ERROR]    ${inner.message}`);
           break;
       }
 

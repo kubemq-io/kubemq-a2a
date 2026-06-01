@@ -45,7 +45,7 @@ public class Agent {
                             System.out.println("Client disconnected after event " + (i - 1));
                             return;
                         }
-                        Thread.sleep(2000);
+                        try { Thread.sleep(2000); } catch (InterruptedException ie) { return; }
                     }
                     var done = MAPPER.writeValueAsString(Map.of(
                         "type", "done", "payload", Map.of("final_result", "completed")));

@@ -13,7 +13,8 @@ using var client = new HttpClient();
 
 Console.WriteLine("=== All Agents ===");
 var resp = await client.GetAsync($"{KubeMqUrl}/agents");
-var agents = JsonNode.Parse(await resp.Content.ReadAsStringAsync())!.AsArray();
+var agentsRoot = JsonNode.Parse(await resp.Content.ReadAsStringAsync())!;
+var agents = agentsRoot is JsonArray arr ? arr : agentsRoot["agents"]!.AsArray();
 foreach (var agent in agents)
 {
     var skills = agent!["skills"]?.AsArray().Select(s => s!["id"]!.GetValue<string>()).ToList() ?? [];
@@ -23,14 +24,16 @@ Console.WriteLine($"\nTotal agents: {agents.Count}");
 
 Console.WriteLine("\n=== Filter by skill_tags=echo ===");
 resp = await client.GetAsync($"{KubeMqUrl}/agents?skill_tags=echo");
-var filtered = JsonNode.Parse(await resp.Content.ReadAsStringAsync())!.AsArray();
+var echoRoot = JsonNode.Parse(await resp.Content.ReadAsStringAsync())!;
+var filtered = echoRoot is JsonArray echoArr ? echoArr : echoRoot["agents"]!.AsArray();
 foreach (var agent in filtered)
     Console.WriteLine($"  {agent!["agent_id"]}");
 Console.WriteLine($"\nFiltered count: {filtered.Count}");
 
 Console.WriteLine("\n=== Filter by skill_tags=nlp ===");
 resp = await client.GetAsync($"{KubeMqUrl}/agents?skill_tags=nlp");
-filtered = JsonNode.Parse(await resp.Content.ReadAsStringAsync())!.AsArray();
+var nlpRoot = JsonNode.Parse(await resp.Content.ReadAsStringAsync())!;
+filtered = nlpRoot is JsonArray nlpArr ? nlpArr : nlpRoot["agents"]!.AsArray();
 foreach (var agent in filtered)
     Console.WriteLine($"  {agent!["agent_id"]}");
 Console.WriteLine($"\nFiltered count: {filtered.Count}");

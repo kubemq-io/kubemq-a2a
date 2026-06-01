@@ -18,7 +18,8 @@ public class Client {
             .uri(URI.create(KUBEMQ_URL + "/agents"))
             .GET().build();
         var resp = client.send(req, HttpResponse.BodyHandlers.ofString());
-        var agents = MAPPER.readTree(resp.body());
+        var agentsNode = MAPPER.readTree(resp.body());
+        var agents = agentsNode.isArray() ? agentsNode : agentsNode.get("agents");
         for (var agent : agents) {
             var skills = agent.get("skills");
             var ids = new java.util.ArrayList<String>();
@@ -32,7 +33,8 @@ public class Client {
             .uri(URI.create(KUBEMQ_URL + "/agents?skill_tags=echo"))
             .GET().build();
         resp = client.send(req, HttpResponse.BodyHandlers.ofString());
-        var filtered = MAPPER.readTree(resp.body());
+        var filteredNode = MAPPER.readTree(resp.body());
+        var filtered = filteredNode.isArray() ? filteredNode : filteredNode.get("agents");
         for (var agent : filtered) {
             System.out.println("  " + agent.get("agent_id").asText());
         }
@@ -43,7 +45,8 @@ public class Client {
             .uri(URI.create(KUBEMQ_URL + "/agents?skill_tags=nlp"))
             .GET().build();
         resp = client.send(req, HttpResponse.BodyHandlers.ofString());
-        filtered = MAPPER.readTree(resp.body());
+        var nlpNode = MAPPER.readTree(resp.body());
+        filtered = nlpNode.isArray() ? nlpNode : nlpNode.get("agents");
         for (var agent : filtered) {
             System.out.println("  " + agent.get("agent_id").asText());
         }

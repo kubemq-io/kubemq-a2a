@@ -37,21 +37,21 @@ public class Agent {
                         "payload", Map.of("status", "working", "progress", 1, "total", 3)));
                     os.write(("event: task.status\ndata: " + s1 + "\n\n").getBytes());
                     os.flush();
-                    Thread.sleep(500);
+                    try { Thread.sleep(500); } catch (InterruptedException ie) { return; }
 
                     var s2 = MAPPER.writeValueAsString(Map.of(
                         "type", "status_update",
                         "payload", Map.of("status", "working", "progress", 2, "total", 3)));
                     os.write(("event: task.status\ndata: " + s2 + "\n\n").getBytes());
                     os.flush();
-                    Thread.sleep(500);
+                    try { Thread.sleep(500); } catch (InterruptedException ie) { return; }
 
                     var artifact = MAPPER.writeValueAsString(Map.of(
                         "type", "artifact",
                         "payload", Map.of("name", "result.json", "data", Map.of("key", "value"))));
                     os.write(("event: task.artifact\ndata: " + artifact + "\n\n").getBytes());
                     os.flush();
-                    Thread.sleep(300);
+                    try { Thread.sleep(300); } catch (InterruptedException ie) { return; }
 
                     var done = MAPPER.writeValueAsString(Map.of(
                         "type", "done",

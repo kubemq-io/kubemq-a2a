@@ -1,0 +1,8 @@
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.csproj.AssemblyReference.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.AssemblyInfoInputs.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.AssemblyInfo.cs
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.csproj.CoreCompileInputs.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.MvcApplicationPartsAssemblyInfo.cs
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.MvcApplicationPartsAssemblyInfo.cache
+/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/obj/Debug/net8.0/KubeMqA2aExamples.sourcelink.json

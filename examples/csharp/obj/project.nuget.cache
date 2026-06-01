@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "0L5Qfd8l6JlGsxq4tr+AlhXjgpWBh7fwCF2Ev/Ef/zEPt28J1UqD2Vo6fl6yIOk5SSWlNgs7QzROylXM4kpqyQ==",
+  "success": true,
+  "projectFilePath": "/Users/liornabat/development/projects/kubemq/clients/kubemq-a2a/examples/csharp/KubeMqA2aExamples.csproj",
+  "expectedPackageFiles": [
+    "/Users/liornabat/.nuget/packages/a2a/1.0.0-preview/a2a.1.0.0-preview.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/a2a.aspnetcore/1.0.0-preview/a2a.aspnetcore.1.0.0-preview.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/microsoft.extensions.ai.abstractions/10.3.0/microsoft.extensions.ai.abstractions.10.3.0.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.3/microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.3/microsoft.extensions.logging.abstractions.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/system.diagnostics.diagnosticsource/10.0.3/system.diagnostics.diagnosticsource.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/system.io.pipelines/10.0.3/system.io.pipelines.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/system.linq.asyncenumerable/10.0.3/system.linq.asyncenumerable.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/system.net.serversentevents/10.0.3/system.net.serversentevents.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/system.text.encodings.web/10.0.3/system.text.encodings.web.10.0.3.nupkg.sha512",
+    "/Users/liornabat/.nuget/packages/system.text.json/10.0.3/system.text.json.10.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

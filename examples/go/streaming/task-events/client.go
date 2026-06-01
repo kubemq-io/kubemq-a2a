@@ -52,15 +52,19 @@ func main() {
 			json.Unmarshal([]byte(dataStr), &d)
 			payload, _ := d["payload"].(map[string]interface{})
 
+			inner, _ := payload["payload"].(map[string]interface{})
+			if inner == nil {
+				inner = payload
+			}
 			switch eventType {
 			case "task.status":
-				fmt.Printf("  [STATUS]   progress=%.0f/%.0f\n", payload["progress"], payload["total"])
+				fmt.Printf("  [STATUS]   progress=%.0f/%.0f\n", inner["progress"], inner["total"])
 			case "task.artifact":
-				fmt.Printf("  [ARTIFACT] name=%v\n", payload["name"])
+				fmt.Printf("  [ARTIFACT] name=%v\n", inner["name"])
 			case "task.done":
-				fmt.Printf("  [DONE]     result=%v\n", payload["final_result"])
+				fmt.Printf("  [DONE]     result=%v\n", inner["final_result"])
 			case "task.error":
-				fmt.Printf("  [ERROR]    %v\n", payload)
+				fmt.Printf("  [ERROR]    %v\n", inner)
 			}
 
 			if eventType == "task.done" || eventType == "task.error" {

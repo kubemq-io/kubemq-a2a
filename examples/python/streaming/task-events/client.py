@@ -31,14 +31,16 @@ async def main() -> None:
                 event_types[event.event] += 1
 
                 if event.event == "task.status":
-                    payload_data = data["payload"]
-                    print(f"  [STATUS]   progress={payload_data['progress']}/{payload_data['total']}")
+                    inner = data["payload"]["payload"]
+                    print(f"  [STATUS]   progress={inner['progress']}/{inner['total']}")
                 elif event.event == "task.artifact":
-                    print(f"  [ARTIFACT] name={data['payload']['name']}")
+                    inner = data["payload"]["payload"]
+                    print(f"  [ARTIFACT] name={inner['name']}")
                 elif event.event == "task.done":
-                    print(f"  [DONE]     result={data['payload']['final_result']}")
+                    inner = data["payload"]["payload"]
+                    print(f"  [DONE]     result={inner['final_result']}")
                 elif event.event == "task.error":
-                    print(f"  [ERROR]    {data['payload']}")
+                    print(f"  [ERROR]    {data['payload']['payload']}")
 
                 if event.event in ("task.done", "task.error"):
                     break

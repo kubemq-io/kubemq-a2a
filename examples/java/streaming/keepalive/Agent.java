@@ -39,7 +39,7 @@ public class Agent {
                     os.flush();
                     System.out.println("Sent event 1, pausing 35s...");
 
-                    Thread.sleep(35_000);
+                    try { Thread.sleep(35_000); } catch (InterruptedException ie) { return; }
 
                     var s2 = MAPPER.writeValueAsString(Map.of(
                         "type", "status_update",
@@ -48,7 +48,7 @@ public class Agent {
                     os.flush();
                     System.out.println("Sent event 2, pausing 35s...");
 
-                    Thread.sleep(35_000);
+                    try { Thread.sleep(35_000); } catch (InterruptedException ie) { return; }
 
                     var done = MAPPER.writeValueAsString(Map.of(
                         "type", "done",

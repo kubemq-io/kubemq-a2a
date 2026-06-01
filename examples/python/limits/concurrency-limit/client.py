@@ -24,7 +24,7 @@ async def send_request(client: httpx.AsyncClient, request_id: int) -> dict:
 
 
 async def main() -> None:
-    async with httpx.AsyncClient(timeout=30) as client:
+    async with httpx.AsyncClient(timeout=30, limits=httpx.Limits(max_connections=200)) as client:
         print(f"Sending {NUM_REQUESTS} concurrent requests (limit is 100)...")
         tasks = [send_request(client, i) for i in range(1, NUM_REQUESTS + 1)]
         results = await asyncio.gather(*tasks, return_exceptions=True)

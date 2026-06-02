@@ -57,6 +57,7 @@ class A2ASoakSuite(BaseSuite):
         latencies: list[float] = []
         errors = 0
         total = 0
+        successes = 0
         first_error_logged = False
         start = time.time()
 
@@ -74,8 +75,8 @@ class A2ASoakSuite(BaseSuite):
                         logger.warning("SK01 first JSON-RPC error: %s", result["error"])
                         first_error_logged = True
                 else:
-                    total += 1
-                    _reservoir_append(latencies, (time.time() - t0) * 1000, total)
+                    successes += 1
+                    _reservoir_append(latencies, (time.time() - t0) * 1000, successes)
             except Exception as exc:
                 errors += 1
                 if not first_error_logged:
@@ -131,14 +132,23 @@ class A2ASoakSuite(BaseSuite):
                 end_time = time.time() + duration_s
                 while time.time() < end_time:
                     try:
+                        terminal = None
                         async for event in a2a_client.stream(
                             agent_id,
                             "message/stream",
                             {"message": {"parts": [{"text": f"soak-stream-{idx}"}]}},
                         ):
-                            if event.get("event") in ("task.done", "task.error"):
+                            ev = event.get("event")
+                            if ev in ("task.done", "task.error"):
+                                terminal = ev
                                 break
-                        local_ok += 1
+                        if terminal == "task.error":
+                            local_err += 1
+                            if not first_err_logged:
+                                logger.debug("SK02 worker-%d task.error event", idx)
+                                first_err_logged = True
+                        else:
+                            local_ok += 1
                     except Exception as exc:
                         local_err += 1
                         if not first_err_logged:
@@ -390,11 +400,16 @@ class A2ASoakSuite(BaseSuite):
         while (time.time() - start) < duration_s:
             t0 = time.time()
             try:
-                await self.a2a.send(
+                result = await self.a2a.send(
                     agent.agent_id,
                     "message/send",
                     {"message": {"parts": [{"text": "mem-soak"}]}},
                 )
+                if "error" in result:
+                    send_errors += 1
+                    if not first_err_logged:
+                        logger.warning("SK05 send error: %s", result["error"])
+                        first_err_logged = True
             except Exception as exc:
                 send_errors += 1
                 if not first_err_logged:

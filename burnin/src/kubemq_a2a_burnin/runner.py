@@ -30,10 +30,13 @@ _SOAK_SUITES = _FUNCTIONAL_SUITES + ["a2a_soak"]
 class Runner:
     """Orchestrates suite execution based on run mode."""
 
-    def __init__(self, config: BurninConfig) -> None:
+    def __init__(
+        self, config: BurninConfig, test_filter: set[str] | None = None
+    ) -> None:
         self.config = config
         self.tracker = TestTracker()
         self.agent_manager = AgentManager(config)
+        self._test_filter = test_filter
         self._fatal = False
 
     def _get_suites_for_mode(self) -> list[str]:
@@ -62,6 +65,7 @@ class Runner:
             await self.agent_manager.create_all()
             await self.agent_manager.start_all()
             await self.agent_manager.register_all()
+            await self.agent_manager.start_heartbeats()
 
             for name in suite_names:
                 suite = get_suite_runner(
@@ -70,7 +74,7 @@ class Runner:
                 if self.config.mode == "smoke" and name == "a2a_sync":
                     await suite.run(filter_ids=_SMOKE_SYNC_TESTS)
                 else:
-                    await suite.run()
+                    await suite.run(filter_ids=self._test_filter)
 
         except Exception as exc:
             logger.error("Fatal error during burn-in: %s", exc, exc_info=True)

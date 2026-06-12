@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import os
 
 import httpx
 
@@ -42,18 +43,19 @@ class AgentManager:
 
     async def create_all(self) -> None:
         port = self._config.agents.base_port
+        prefix = os.environ.get("BURNIN_AGENT_PREFIX", "")
         cfg = self._config.agents
 
         for i in range(cfg.echo.count):
             self._agents.append(
-                EchoAgent(f"echo-{i + 1:02d}", f"Echo Agent {i + 1:02d}", port)
+                EchoAgent(f"{prefix}echo-{i + 1:02d}", f"Echo Agent {i + 1:02d}", port)
             )
             port += 1
 
         for i in range(cfg.slow.count):
             self._agents.append(
                 SlowAgent(
-                    f"slow-{i + 1:02d}",
+                    f"{prefix}slow-{i + 1:02d}",
                     f"Slow Agent {i + 1:02d}",
                     port,
                     delay_ms=cfg.slow.delay_ms,
@@ -64,7 +66,7 @@ class AgentManager:
         for i in range(cfg.error.count):
             self._agents.append(
                 ErrorAgent(
-                    f"error-{i + 1:02d}",
+                    f"{prefix}error-{i + 1:02d}",
                     f"Error Agent {i + 1:02d}",
                     port,
                     error_rate=cfg.error.error_rate,
@@ -75,7 +77,7 @@ class AgentManager:
         for i in range(cfg.streaming.count):
             self._agents.append(
                 StreamAgent(
-                    f"stream-{i + 1:02d}",
+                    f"{prefix}stream-{i + 1:02d}",
                     f"Stream Agent {i + 1:02d}",
                     port,
                     events_per_stream=cfg.streaming.events_per_stream,
@@ -87,7 +89,7 @@ class AgentManager:
         for i in range(cfg.oversize.count):
             self._agents.append(
                 OversizeAgent(
-                    f"oversize-{i + 1:02d}",
+                    f"{prefix}oversize-{i + 1:02d}",
                     f"Oversize Agent {i + 1:02d}",
                     port,
                     response_size_bytes=cfg.oversize.response_size_bytes,

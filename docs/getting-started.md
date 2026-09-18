@@ -12,7 +12,7 @@ docker run -d \
   -p 9090:9090 \
   -p 8080:8080 \
   -e KUBEMQ_A2A_ENABLE=true \
-  kubemq/kubemq:latest
+  europe-docker.pkg.dev/kubemq/images/kubemq-next:latest
 ```
 
 Verify KubeMQ is running with A2A:
